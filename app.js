@@ -1,15 +1,15 @@
-let timer=null;let currentDisplay=null;
+let timer=null;let current=null;
 const alarm=document.getElementById('alarm');
-function startTimer(seconds, displayId){
+function startTimer(sec,id){
   stopTimer();
-  currentDisplay=document.getElementById(displayId);
-  let remaining=seconds;
+  current=document.getElementById(id);
+  let r=sec;
   timer=setInterval(()=>{
-    const m=String(Math.floor(remaining/60)).padStart(2,'0');
-    const s=String(remaining%60).padStart(2,'0');
-    currentDisplay.textContent=`${m}:${s}`;
-    if(remaining===0){clearInterval(timer);alarm.play();}
-    remaining--;
+    const m=String(Math.floor(r/60)).padStart(2,'0');
+    const s=String(r%60).padStart(2,'0');
+    current.textContent=`${m}:${s}`;
+    if(r===0){clearInterval(timer);alarm.play();}
+    r--;
   },1000);
 }
 function stopTimer(){if(timer){clearInterval(timer);timer=null;}}
