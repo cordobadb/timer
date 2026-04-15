@@ -1,7 +1,7 @@
 {
   "name": "Timer App",
   "short_name": "Timer",
-  "start_url": "./index.html",
+  "start_url": "/timer/",
   "display": "standalone",
   "display_override": ["standalone"],
   "background_color": "#ffffff",
