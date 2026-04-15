@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timer App</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>⏱️ Timer</h1>
+
+  <div class="timer">
+    <h2>3 Minuten</h2>
+    <div id="time1">03:00</div>
+    <button onclick="startTimer(180, 'time1')">Start</button>
+    <button onclick="stopTimer()">Abbrechen</button>
+  </div>
+
+  <div class="timer">
+    <h2>1:30 Minuten</h2>
+    <div id="time2">01:30</div>
+    <button onclick="startTimer(90, 'time2')">Start</button>
+    <button onclick="stopTimer()">Abbrechen</button>
+  </div>
+
+  <audio id="alarm" src="beep.wav"></audio>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>

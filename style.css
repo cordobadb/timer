@@ -1,0 +1,4 @@
+body {font-family: system-ui, sans-serif;text-align:center;margin-top:40px;}
+.timer {margin-bottom:40px;}
+#time1,#time2 {font-size:3rem;margin:10px;}
+button {font-size:1.2rem;padding:10px 20px;margin:5px;}
